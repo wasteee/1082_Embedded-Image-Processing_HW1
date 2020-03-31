@@ -50,3 +50,24 @@ Speedup : 9.35 </p>
 執行結果</p>
 ![image](https://github.com/wasteee/1082_Embedded-Image-Processing_HW1/blob/master/imagetest/closing_whit_avx.jpeg)
 
+
+# Multi thread and Mapreduce </p>
+multithreading 是一種以重疊的方式讓單顆 CPU 內多個 threads 以能夠共用功能單元，與 multiprocessor 的差別在於， multithreading 不須複製多個processors ，而是讓 threads 之間共用 CPU 的大多功能，複製的只有 threads 各自的狀態，像是 regester,program counter...等等。  </p>
+而在影像處理的領域中，使用 multithreading 的技術可以提升整體運算的效率，像是在 I/O 讀取中的空檔，又或是 memory failure 的空檔中，插入另一個 thread 來執行，使得空閒中的 CPU 有事情做，可讓整體 throughtput 增加。  </p>
+
+Mapreduce 是由 Google 在2003年所提出的函式庫，首先將要執行的問題，拆解成 Map 和 Reduce 的方式來執行(類似於 divide and conquer)，以達到分散運算的效果。 </p>
+步驟為: </p>
+1.將要執行的 MapReduce 程式複製到 Master 與每一臺 Worker 機器中。 </p>
+2.Master 決定 Map 程式與 Reduce 程式，分別由哪些 Worker 機器執行。 </p>
+3.將所有的資料區塊，分配到執行 Map 程式的 Worker 機器中進行 Map。 </p>
+4.將 Map 後的結果存入 Worker 機器的本地磁碟。 </p>
+5.執行 Reduce 程式的 Worker 機器，遠端讀取每一份 Map 結果，進行彙整與排序，同時執行 Reduce 程式。 </p>
+6.將使用者需要的運算結果輸出。 </p>
+
+參考資料: </p>
+computer architecture a quantitative approach 6th </p>
+[Mapreduce](https://blog.alantsai.net/posts/2017/12/data-science-series-09-hadoop-map-reduce-java-wordcount-example) </p>
+[hadoop](https://www.inside.com.tw/article/4428-big-data-4-hadoop) </p>
+
+
+
