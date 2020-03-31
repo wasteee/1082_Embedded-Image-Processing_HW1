@@ -25,7 +25,7 @@ Python version : 3.7 </p>
 Opencv version : 3.4.1 </p>
 
 - 原始影像</p>
-![image](https://github.com/wasteee/1082_Embedded-Image-Processing_HW1/blob/master/imagetest/photo.jpeg)
+![image](https://github.com/wasteee/1082_Embedded-Image-Processing_HW1/blob/master/imagetest/photo.jpeg =80%x)
 
 - 二質化 </p>
 以128為分界，大於128為255，小於等於128為0 </p>
