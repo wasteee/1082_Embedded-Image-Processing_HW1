@@ -56,7 +56,6 @@ Speedup : 9.35 </p>
 # Multi thread and Mapreduce </p>
 - Multi thread  </p>
 multithreading 是一種以重疊的方式讓單顆 CPU 內多個 threads 以能夠共用功能單元，與 multiprocessor 的差別在於， multithreading 不須複製多個processors ，而是讓 threads 之間共用 CPU 的大多功能，複製的只有 threads 各自的狀態，像是 regester,program counter...等等。  </p>
-
 而在影像處理的領域中，使用 multithreading 的技術可以提升整體運算的效率，像是在 I/O 讀取中的空檔，又或是 memory failure 的空檔中，插入另一個 thread 來執行，使得空閒中的 CPU 有事情做，可讓整體 throughtput 增加。  </p>
 
 - Mapreduce  </p>
