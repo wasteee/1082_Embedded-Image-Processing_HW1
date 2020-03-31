@@ -25,15 +25,17 @@ Python version : 3.7 </p>
 Opencv version : 3.4.1 </p>
 
 - Opening </p>
+kernel為3x3</p>
 使用AVX優化後執行100次opening，執行時間為1269ms。</p>
-使用AVX優化後執行100次opening，執行時間為1.412s。</p>
+關閉AVX優化後執行100次opening，執行時間為1.412s。</p>
 (由於只關閉AVX需修改CMake內容，且須使用c++，整體較為複雜，此處改為呼叫cv2.setUseOptimized 關閉所有優化，包含SSE2,AVX..等)</p>
 Speedup : 11.1247 </p>
 
 
 - Closing </p>
+kernel為3x3</p>
 使用AVX優化後執行100次closing，執行時間為1265ms。</p>
-使用AVX優化後執行100次closing，執行時間為1.412s。</p>
+關閉AVX優化後執行100次closing，執行時間為1.412s。</p>
 (由於只關閉AVX需修改CMake內容，且須使用c++，整體較為複雜，此處改為呼叫cv2.setUseOptimized 關閉所有優化，包含SSE2,AVX..等)</p>
 Speedup : 11.1611 </p>
 
