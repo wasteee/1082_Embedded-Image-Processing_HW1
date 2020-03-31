@@ -34,19 +34,19 @@ Opencv version : 3.4.1 </p>
 
 - Opening </p>
 kernel為3x3</p>
-使用AVX優化後執行100次opening，執行時間為1269ms。</p>
-關閉AVX優化後執行100次opening，執行時間為1.412s。</p>
+使用AVX優化後執行100次opening，執行時間為1611ms。</p>
+關閉AVX優化後執行100次opening，執行時間為1.494s。</p>
 (由於只關閉AVX需修改CMake內容，且須使用c++，整體較為複雜，此處改為呼叫cv2.setUseOptimized 關閉所有優化，包含SSE2,AVX..等)</p>
-Speedup : 11.1247 </p>
+Speedup : 9.27 </p>
 執行結果</p>
 ![image](https://github.com/wasteee/1082_Embedded-Image-Processing_HW1/blob/master/imagetest/opening_with_avx.jpeg)
 
 - Closing </p>
 kernel為3x3</p>
-使用AVX優化後執行100次closing，執行時間為1265ms。</p>
-關閉AVX優化後執行100次closing，執行時間為1.412s。</p>
+使用AVX優化後執行100次closing，執行時間為1604ms。</p>
+關閉AVX優化後執行100次closing，執行時間為1.5s。</p>
 (由於只關閉AVX需修改CMake內容，且須使用c++，整體較為複雜，此處改為呼叫cv2.setUseOptimized 關閉所有優化，包含SSE2,AVX..等)</p>
-Speedup : 11.1611 </p>
+Speedup : 9.35 </p>
 執行結果</p>
 ![image](https://github.com/wasteee/1082_Embedded-Image-Processing_HW1/blob/master/imagetest/closing_whit_avx.jpeg)
 
