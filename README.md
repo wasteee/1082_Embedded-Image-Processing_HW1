@@ -56,10 +56,10 @@ Speedup : 9.35 </p>
 # Multi thread and Mapreduce </p>
 - Multi thread  </p>
 multithreading 是一種以重疊的方式讓單顆 CPU 內多個 threads 以能夠共用功能單元，與 multiprocessor 的差別在於， multithreading 不須複製多個processors ，而是讓 threads 之間共用 CPU 的大多功能，複製的只有 threads 各自的狀態，像是 regester,program counter...等等。  </p>
-而在影像處理的領域中，使用 multithreading 的技術可以提升整體運算的效率，像是在 I/O 讀取中的空檔，又或是 memory failure 的空檔中，插入另一個 thread 來執行，使得空閒中的 CPU 有事情做，可讓整體 throughtput 增加。  </p>
+而在影像處理的領域中，使用 multithreading 的技術可以提升整體運算的效率，像是在 I/O 讀取中的空檔，又或是 memory failure 的空檔中，插入另一個 thread 來執行，使得空閒中的 CPU 有事情做，可讓整體 throughput 增加。  </p>
 
 - Mapreduce  </p>
-Mapreduce 是由 Google 在2003年所提出的函式庫，首先將要執行的問題，拆解成 Map 和 Reduce 的方式來執行(類似於 divide and conquer)，以達到分散運算的效果。 </p>
+Mapreduce 是由 Google 在 2003 年所提出的函式庫，首先將要執行的問題，拆解成 Map 和 Reduce 的方式來執行(類似於 divide and conquer)，以達到分散運算的效果。 </p>
 步驟為: </p>
 1.將要執行的 MapReduce 程式複製到 Master 與每一臺 Worker 機器中。 </p>
 2.Master 決定 Map 程式與 Reduce 程式，分別由哪些 Worker 機器執行。 </p>
