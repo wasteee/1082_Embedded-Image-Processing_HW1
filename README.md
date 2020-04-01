@@ -27,14 +27,14 @@ Opencv version : 3.4.1 </p>
 - 原始影像</p>
 ![image](https://github.com/wasteee/1082_Embedded-Image-Processing_HW1/blob/master/imagetest/photo.jpeg)
 
-- 二質化 </p>
+- 二值化 </p>
 以128為分界，大於128為255，小於等於128為0 </p>
 執行結果</p>
 ![image](https://github.com/wasteee/1082_Embedded-Image-Processing_HW1/blob/master/imagetest/Binarization.jpeg)
 
 - Opening </p>
 kernel為3x3</p>
-使用AVX優化後執行100次opening，執行時間為1611ms。</p>
+使用AVX優化後執行100次opening，執行時間為161ms。</p>
 關閉AVX優化後執行100次opening，執行時間為1.494s。</p>
 (由於只關閉AVX需修改CMake內容，且須使用c++，整體較為複雜，此處改為呼叫cv2.setUseOptimized 關閉所有優化，包含SSE2,AVX..等)</p>
 Speedup : 9.27 </p>
@@ -43,7 +43,7 @@ Speedup : 9.27 </p>
 
 - Closing </p>
 kernel為3x3</p>
-使用AVX優化後執行100次closing，執行時間為1604ms。</p>
+使用AVX優化後執行100次closing，執行時間為160ms。</p>
 關閉AVX優化後執行100次closing，執行時間為1.5s。</p>
 (由於只關閉AVX需修改CMake內容，且須使用c++，整體較為複雜，此處改為呼叫cv2.setUseOptimized 關閉所有優化，包含SSE2,AVX..等)</p>
 Speedup : 9.35 </p>
